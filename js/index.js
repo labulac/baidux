@@ -8,7 +8,7 @@ var clipboard = new ClipboardJS('.copy');
 clipboard.on('success', function(e) {
     console.log(e);
     $("#tip1").text("已将链接复制到剪切板");
-    $("#tip2").text("快把这智慧的链接糊给他吧");
+    $("#tip2").text("快把这智慧的链接发送给他吧");
 });
 clipboard.on('error', function(e) {
     console.log(e);
