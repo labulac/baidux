@@ -127,7 +127,7 @@ $(document).ready(function() {
         mouse_obj.animate({
             "top": button_offest.top + 10,
             "left": button_offest.left + 90
-        }, 2000, "swing", function() {
+        }, 1000, "swing", function() {
             $("#search-button").addClass("wb-click");
             $("#tip2").text("然后就能找到你想要的答案啦");
             navigate = "https://www.baidu.com/s?wd=";
