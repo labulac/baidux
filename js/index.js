@@ -34,7 +34,7 @@ function Api(aaaaa){
     xmlhttp.send();//发送请求
     xmlhttp.onreadystatechange=function(){
         if(xmlhttp.status==200&&xmlhttp.readyState==4){
-            var result.shorturl=JSON.parse(xmlhttp.response);
+            var result=JSON.parse(xmlhttp.response);
             console.log(result）//result即为接口返回给我们的数据具体进行处理可以封装一个方法
                         return result.shorturl
 }
