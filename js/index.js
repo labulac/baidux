@@ -1,8 +1,4 @@
-/**
- *  Designed by WolfBolin
- *  https://wolfbolin.com
- *  mailto@wolfbolin.com
- */
+
 // 剪切板功能模块
 var clipboard = new ClipboardJS('.copy');
 clipboard.on('success', function(e) {
@@ -24,22 +20,33 @@ function getQuery(name) {
     }
     return null;
 }
+
+
+
+
+
+
 //api缩短链接
 function Api(aaaaa){
-    var xmlhttp=new XMLHttpRequest();
-    var url="http://s.labulac.top/api.php?url=" + aaaaa;
     
-    var type="GET";//方法
-    xmlhttp.open(type,url,true);//方法，接口，异步
-    xmlhttp.send();//发送请求
-    xmlhttp.onreadystatechange=function(){
-        if(xmlhttp.status==200&&xmlhttp.readyState==4){
-            var result=JSON.parse(xmlhttp.response);
-            //console.log(result）//result即为接口返回给我们的数据具体进行处理可以封装一个方法
-                        return result.shorturl
+
+    $.ajax(
+		{
+			url:"http://s.labulac.top/api.php?url=" + aaaaa,type:'GET',cache:false,async:false,timeout:1000*1000,
+			success:function(d)
+			{
+				result = d;
+			},
+			error:function(e)
+			{
+				result = e;
+			}
+		});
+		return result;
+
+                        
 }
-}
-}
+
 
 
 // 不使用window.location.host，以保证在本地也可用
@@ -84,6 +91,12 @@ $("#search-button").mouseup(function() {
     $("#search-button").removeClass("wb-click"); // 更新按钮点击样式
 });
 // “百度一下”按钮的响应事件
+
+
+
+
+
+
 $("#search-button").click(function() {
     // 获取输入框输入内容
     input_text = $("#search-input").val();
@@ -99,8 +112,34 @@ $("#search-button").click(function() {
     query_text = encodeURIComponent(input_text);
     longurl=hostname + "?q=" + query_text;
     
-    $("#tip-input").val(Api(longurl));
+    
+    
+    var bbbb=Api(longurl);
+    console.log(bbbb.shorturl);
+
+
+    
+    
+    $("#tip-input").val(bbbb.shorturl);
+
+
+
+
 });
+
+
+
+
+
+    
+    
+
+    
+
+
+    
+    
+
 // 主要业务逻辑
 $(document).ready(function() {
     hostname = getHostname(); // 获取页面域名或地址
@@ -150,7 +189,7 @@ $(document).ready(function() {
         }, 2000, "swing", function() {
             $("#search-button").addClass("wb-click");
             $("#tip2").text("然后就能找到你想要的答案啦");
-            navigate = "https://www.baidu.com/s?wd=";
+            navigate = "http://www.baidu.com/s?wd=";
             navigate += encodeURIComponent(query);
             console.log("百度一下")
             console.log(navigate);
