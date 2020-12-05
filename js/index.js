@@ -1,4 +1,3 @@
-
 // 剪切板功能模块
 var clipboard = new ClipboardJS('.copy');
 clipboard.on('success', function(e) {
