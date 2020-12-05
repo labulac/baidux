@@ -24,6 +24,24 @@ function getQuery(name) {
     }
     return null;
 }
+//api缩短链接
+function Api(aaaaa){
+    var xmlhttp=new XMLHttpRequest();
+    var url="http://s.labulac.top/api.php?url=" + aaaaa;
+    
+    var type="GET";//方法
+    xmlhttp.open(type,url,true);//方法，接口，异步
+    xmlhttp.send();//发送请求
+    xmlhttp.onreadystatechange=function(){
+        if(xmlhttp.status==200&&xmlhttp.readyState==4){
+            var result.shorturl=JSON.parse(xmlhttp.response);
+            console.log(result）//result即为接口返回给我们的数据具体进行处理可以封装一个方法
+                        return result.shorturl
+}
+}
+}
+
+
 // 不使用window.location.host，以保证在本地也可用
 function getHostname() {
     url = window.location.href;
@@ -79,7 +97,9 @@ $("#search-button").click(function() {
         $("#link").css("display", "block");
     }
     query_text = encodeURIComponent(input_text);
-    $("#tip-input").val(hostname + "?q=" + query_text);
+    longurl=hostname + "?q=" + query_text;
+    
+    $("#tip-input").val(api(longurl));
 });
 // 主要业务逻辑
 $(document).ready(function() {
