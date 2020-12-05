@@ -32,7 +32,7 @@ function Api(aaaaa){
 
     $.ajax(
 		{
-			url:"http://s.labulac.top/api.php?url=" + aaaaa,type:'GET',cache:false,async:false,timeout:1000*1000,
+			url:"http://s.labulac.top/api.php?url=" + aaaaa,type:'post',cache:false,async:false,timeout:1000*1000,
 			success:function(d)
 			{
 				result = d;
