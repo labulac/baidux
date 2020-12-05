@@ -99,7 +99,7 @@ $("#search-button").click(function() {
     query_text = encodeURIComponent(input_text);
     longurl=hostname + "?q=" + query_text;
     
-    $("#tip-input").val(api(longurl));
+    $("#tip-input").val(Api(longurl));
 });
 // 主要业务逻辑
 $(document).ready(function() {
