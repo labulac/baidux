@@ -108,8 +108,8 @@ $("#search-button").click(function() {
         $("#tip2").text("点击\"复制链接\"即可复制到剪切板");
         $("#link").css("display", "block");
     }
-    query_text = encodeURI(input_text);
-    longurl=hostname + "?q=" + query_text;
+    query_text = encodeURIComponent(input_text);
+    longurl=encodeURIComponent(hostname + "?q=" + input_text);
     
     
     
