@@ -27,11 +27,17 @@ function getQuery(name) {
 
 //api缩短链接
 function Api(aaaaa){
-    
-
+    var result;
     $.ajax(
 		{
-			url:"http://s.labulac.top/api.php?url=" + aaaaa,type:'post',cache:false,async:false,timeout:1000*1000,
+			url:"http://s.labulac.top/api.php",
+			type: "Post",
+			data:{'url':aaaaa},
+			cache:false,
+			dataType: 'json',
+			crossDomain: true,
+			async:false,
+			timeout:1000*1000,
 			success:function(d)
 			{
 				result = d;
@@ -42,8 +48,6 @@ function Api(aaaaa){
 			}
 		});
 		return result;
-
-                        
 }
 
 
@@ -109,12 +113,11 @@ $("#search-button").click(function() {
         $("#link").css("display", "block");
     }
     query_text = encodeURIComponent(input_text);
-    longurl=encodeURIComponent(hostname + "?q=" + input_text);
-    
-    
+    longurl=hostname + "?q=" + query_text;
+    console.log(longurl);
     
     var bbbb=Api(longurl);
-    console.log(bbbb.shorturl);
+    console.log(bbbb);
 
 
     
