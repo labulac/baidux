@@ -78,7 +78,7 @@ function gotoBeginStatus() {
     mouse_obj.stop(true);
     mouse_obj.css("display", "none");
     $("#tip1").text("我帮您教他如何使用百度搜索");
-    $("#tip2").text("将问题输入后点击\"百度一下\"");
+    $("#tip2").text("短链接生成速度与您的网络环境有关");
     $("#link").css("display", "none");
 }
 // 用户点击输入框时终止所有动画
@@ -180,7 +180,7 @@ $(document).ready(function() {
             "left": input_offest.left + 10,
         }, 2000, "swing", function() {
             // 计算每个字符的输入时间
-            $("#tip2").text("输入之后点击\"百度一下\"按钮");
+            $("#tip1").text("输入之后点击\"百度一下\"按钮");
             time = 1800 / query.length;
             addSearchText(query, time); // 逐个写入文本内容
         });
