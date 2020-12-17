@@ -59,10 +59,10 @@ $("#search-button").click(function() {
     console.log(bbbb);
 	
     if (bbbb.code==1001) {
-        $("#tip1").text("输入有误，检查一下吧");
+        $("#tip1").text("输入有误，检查一下吧，看着咋不像链接呢...");
         $("#tip2").text("error_code: 1001");
    }else{
-	   $("#tip1").text("短链接已经生成");
+	   $("#tip1").text("短链接已经生成ヽ(￣▽￣)ﾉ");
 	   $("#tip2").text("点击\"复制链接\"即可复制到剪切板");
 	   $("#link").css("display", "block");}
     
