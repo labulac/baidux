@@ -58,8 +58,8 @@ $("#search-button").click(function() {
     var bbbb=Api(longurl);
     console.log(bbbb);
 	
-	
-    if (bbbb.indexOf("1001") != -1) {
+	var str = bbbb;
+    if (str.indexOf("1001") != -1) {
         $("#tip1").text("输入有误，检查一下吧");
         $("#tip2").text("error_code: 1001");
    }else{
