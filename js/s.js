@@ -50,18 +50,22 @@ $("#search-button").click(function() {
     input_text = $("#search-input").val();
     input_text = input_text.trim();
    
-    // 根据输入框内容更新显示样式
-    if (input_text.length !== 0) {
-        $("#tip1").text("短链接已经生成");
-        $("#tip2").text("点击\"复制链接\"即可复制到剪切板");
-        $("#link").css("display", "block");
-    }
+    
     query_text = encodeURIComponent(input_text);
     longurl=input_text;
     console.log(longurl);
     
     var bbbb=Api(longurl);
     console.log(bbbb);
+	
+	
+    if (bbbb=="code: 1001") {
+        $("#tip1").text("输入有误，检查一下吧");
+        $("#tip2").text("error_code: 1001");
+   }else{
+	   $("#tip1").text("短链接已经生成");
+	   $("#tip2").text("点击\"复制链接\"即可复制到剪切板");
+	   $("#link").css("display", "block");}
     
     $("#tip-input").val(bbbb.shorturl);
 
