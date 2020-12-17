@@ -63,7 +63,7 @@ $("#search-button").click(function() {
         $("#tip2").text("error_code: 1001");
    }else{
 	   $("#tip1").text("短链接已经生成ヽ(￣▽￣)ﾉ");
-	   $("#tip2").text("点击\"复制链接\"即可复制到剪切板");
+	   $("#tip2").text("点击\"复制短链接\"即可复制到剪切板");
 	   $("#link").css("display", "block");}
     
     $("#tip-input").val(bbbb.shorturl);
