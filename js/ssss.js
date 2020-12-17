@@ -59,7 +59,7 @@ $("#search-button").click(function() {
     console.log(bbbb);
 	
 	
-    if (bbbb=="{code: 1001}") {
+    if (bbbb=="{"code":1001}") {
         $("#tip1").text("输入有误，检查一下吧");
         $("#tip2").text("error_code: 1001");
    }else{
