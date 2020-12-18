@@ -49,12 +49,12 @@ $("#search-button").click(function() {
     // 获取输入框输入内容
     input_text = $("#search-input").val();
     input_text = input_text.trim();
-   
     
     query_text = encodeURIComponent(input_text);
     longurl=input_text;
     console.log(longurl);
-if (longurl==""){$("#tip1").text("没有输入吧！好假。");
+	
+	if (longurl==""){$("#tip1").text("没有输入吧！好假！");
         $("#tip2").text("检查一下吧");
 }else{
     
@@ -71,4 +71,4 @@ if (longurl==""){$("#tip1").text("没有输入吧！好假。");
     
     $("#tip-input").val(bbbb.shorturl);
 
-})};
+}});
