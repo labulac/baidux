@@ -54,13 +54,16 @@ $("#search-button").click(function() {
     query_text = encodeURIComponent(input_text);
     longurl=input_text;
     console.log(longurl);
+if (longurl==""){$("#tip1").text("没有输入吧！好假。");
+        $("#tip2").text("检查一下吧");
+}else{
     
     var bbbb=Api(longurl);
     console.log(bbbb);
 	
     if (bbbb.code==1001) {
-        $("#tip1").text("输入有误，检查一下吧，看着咋不像链接呢...");
-        $("#tip2").text("error_code: 1001");
+        $("#tip1").text("输入有误，检查一下吧，");
+        $("#tip2").text("看着咋不像链接呢...");
    }else{
 	   $("#tip1").text("短链接已经生成ヽ(￣▽￣)ﾉ");
 	   $("#tip2").text("点击\"复制短链接\"即可复制到剪切板");
@@ -68,4 +71,4 @@ $("#search-button").click(function() {
     
     $("#tip-input").val(bbbb.shorturl);
 
-});
+})};
