@@ -61,10 +61,11 @@ $("#search-button").click(function() {
     var bbbb=Api(longurl);
     console.log(bbbb);
 	
-    if (bbbb.code==1001) {
+    if (bbbb.code==404) {
         $("#tip1").text("输入有误，检查一下吧，");
         $("#tip2").text("看着咋不像链接呢...");
-   }else{
+   }else if(bbbb==""){$("#tip1").text("网络有问题，没获取到");
+        $("#tip2").text("NETWORK ERROR");}else{
 	   $("#tip1").text("短链接已经生成ヽ(￣▽￣)ﾉ");
 	   $("#tip2").text("点击\"复制短链接\"即可复制到剪切板");
 	   $("#link").css("display", "block");}
