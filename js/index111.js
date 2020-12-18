@@ -108,22 +108,24 @@ $("#search-button").click(function() {
     gotoBeginStatus();
     // 根据输入框内容更新显示样式
     if (input_text.length !== 0) {
-        $("#tip1").text("蕴藏知识的链接已经生成");
-        $("#tip2").text("点击\"复制链接\"即可复制到剪切板");
-        $("#link").css("display", "block");
-    }
+        
+    
     query_text = encodeURIComponent(input_text);
     longurl=hostname + "?q=" + query_text;
     console.log(longurl);
     
     var bbbb=Api(longurl);
     console.log(bbbb);
+	
+	$("#tip1").text("蕴藏知识的链接已经生成");
+        $("#tip2").text("点击\"复制链接\"即可复制到剪切板");
+        $("#link").css("display", "block");
 
 
     
     
     $("#tip-input").val(bbbb.shorturl);
-
+}
 
 
 
