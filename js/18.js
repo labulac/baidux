@@ -71,5 +71,22 @@ $("#search-button").click(function() {
 	   $("#link").css("display", "block");}
     
     $("#tip-input").val(bbbb.shorturl);
+	
+	
+	var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://data.zz.baidu.com/urls?site=www.labulac.top&token=ic5AbzhoqVF5dUBN",
+  "method": "POST",
+  "headers": {
+    "Content-Type": "text/plain",
+    "Cache-Control": "no-cache",
+  },
+  "data": "http://www.labulac.top\nhttp://labulac.top\nhttp://blog.labulac.top\nhttp://s.labulac.top\nhttp://bd.labulac.top\nhttp://repo.labulac.top\nhttp://drive.labulac.top\nhttp://driver.labulac.top\nhttp://fun.labulac.top\nhttp://docker.labulac.top\nhttp://ali.labulac.top\nhttp://aria.labulac.top"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 
 }});
