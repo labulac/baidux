@@ -74,7 +74,7 @@ $("#search-button").click(function() {
 	
 	
 	var settings = {
-  "async": true,
+  "async": false,
   "crossDomain": true,
   "url": "http://data.zz.baidu.com/urls?site=www.labulac.top&token=ic5AbzhoqVF5dUBN",
   "method": "POST",
