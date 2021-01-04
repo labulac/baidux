@@ -25,7 +25,7 @@ function Api(aaaaa){
     var result;
     $.ajax(
 		{
-			url:"http://s.labulac.top/api.php",
+			url:"https://s.labulac.top/api.php",
 			type: "Post",
 			data:{'url':aaaaa},
 			cache:false,
