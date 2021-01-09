@@ -20,20 +20,23 @@
             </span>
         </div>
         <div class="wb-search" id="search">
-            <input autofocus="autofocus" id="search-input" type="text"/>
+            <input autofocus="autofocus" id="search-input" autocomplete="off" type="text"/>
             <button id="search-button">
                 百度一下
             </button>
         </div>
         <div class="wb-tip" id="tip">
             <span id="tip1">
-                教你如何使用百度搜索
+                将问题输入后点击"百度一下"，点击后将生成一条短链接
             </span>
             <span id="tip2">
-                将问题输入后点击"百度一下"
+                短链接由<a href="http://s.labulac.top/"> labulac短链接 </a>提供服务
+            </span>
+            <span id="tip3">
+                
             </span>
             <div class="wb-link" id="link">
-                <input id="tip-input" readonly="readonly" type="text"/>
+                <input id="tip-input" readonly="readonly" autocomplete="off" type="text"/>
                 <button class="copy" data-clipboard-target="#tip-input" id="tip-button">
                     复制链接
                 </button>
@@ -53,13 +56,17 @@
                 <a href="https://blog.labulac.top/">
                     labulac博客
                 </a>
+                |
+                <a href="http://s.labulac.top/">
+                    labulac短链接
+                </a>
             </span>
         </div>
         <img class="wb-mouse" id="fake-mouse" src="https://cdn.jsdelivr.net/gh/labulac/baidux@master/img/mouse.png"/>
     </body>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.1/jquery.min.js">
+    <script src="https://cdn.jsdelivr.net/gh/labulac/baidux@master/js/jquery.min.js">
     </script>
-    <script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js">
+    <script src="https://cdn.jsdelivr.net/gh/labulac/baidux@master/js/clipboard.min.js">
     </script>
     <script src="https://cdn.jsdelivr.net/gh/labulac/baidux@master/js/index.js">
     </script>
