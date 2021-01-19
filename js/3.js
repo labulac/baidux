@@ -45,7 +45,7 @@ function Api(aaaaa){
 		return result;
 }
 
-function tuisong(aaaaa){
+function tuisong(){
     var result;
     $.ajax(
 		{
@@ -93,7 +93,9 @@ $("#search-button").click(function() {
         $("#tip2").text("NETWORK ERROR");}else if(bbbb.code==200){
 	   $("#tip1").text("短链接已经生成ヽ(￣▽￣)ﾉ");
 	   $("#tip2").text("点击\"复制短链接\"即可复制到剪切板");
-	   $("#link").css("display", "block");}
+	   $("#link").css("display", "block");
+	var cccc=tuisong();
+	console.log(cccc);}
     
     $("#tip-input").val(bbbb.shorturl);
 
