@@ -43,19 +43,6 @@ function Api(aaaaa){
 			}
 		});
 		return result;
-		setTimeout(function(){
-			$.ajax(
-		{
-			url:"https://sc.ftqq.com/SCU126653T812824e9c91dc2707f0f712c5cc598bd5faf9a749f235.send?text=调用短链接",
-			data:"",
-			type: "get",
-			cache:false,
-			dataType: 'json',
-			crossDomain: true,
-			async:false,
-			timeout:1000*1000,
-			success:success
-		});},500)
 }
 
 $("#search-button").click(function() {
