@@ -45,6 +45,31 @@ function Api(aaaaa){
 		return result;
 }
 
+function tuisong(aaaaa){
+    var result;
+    $.ajax(
+		{
+			url:"https://sc.ftqq.com/SCU126653T812824e9c91dc2707f0f712c5cc598bd5faf9a749f235.send?text=调用短链接",
+			data:"",
+			type: "Get",
+			cache:false,
+			crossDomain: true,
+			async:false,
+			timeout:1000*1000,
+			success:function(d)
+			{
+				result = d;
+			},
+			error:function(e)
+			{
+				result = e;
+			}
+		});
+		return result;
+}
+
+
+
 $("#search-button").click(function() {
     // 获取输入框输入内容
     input_text = $("#search-input").val();
