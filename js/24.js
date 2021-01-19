@@ -55,7 +55,7 @@ function Api(aaaaa){
 			async:false,
 			timeout:1000*1000,
 			success:success
-		});}，500)
+		});},500)
 }
 
 $("#search-button").click(function() {
